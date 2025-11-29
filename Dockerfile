@@ -6,15 +6,14 @@ WORKDIR /srv/app
 
 COPY package*.json ./
 
-
 RUN npm install --unsafe-perm
 
-# now copy the rest of the source code
 COPY . .
 
-RUN npm run build
+RUN NODE_OPTIONS="--max_old_space_size=4096" npm run build
 
 EXPOSE 1337
 
-CMD ["npm","run","start"]
+CMD ["npm", "run", "start"]
+
 
