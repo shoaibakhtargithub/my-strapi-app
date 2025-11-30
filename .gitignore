@@ -130,6 +130,7 @@ build
 .strapi-updater.json
 .strapi-cloud.json
 
+terraform/
 .terraform/
 *.tfstate
 *.tfstate.backup
