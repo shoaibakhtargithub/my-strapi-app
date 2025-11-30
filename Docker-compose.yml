@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   strapi:
-    build: .
+    build: shoaibakhtar003/my-strapi-app:v1
     ports:
       - "1337:1337"
     volumes:

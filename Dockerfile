@@ -10,7 +10,7 @@ RUN npm install --unsafe-perm
 
 COPY . .
 
-RUN NODE_OPTIONS="--max_old_space_size=4096" npm run build
+RUN  npm run build
 
 EXPOSE 1337
 
