@@ -1,24 +1,20 @@
-output "alb_dns_name" {
-  description = "DNS name of the Application Load Balancer"
-  value       = module.alb.alb_dns_name
-}
-
 output "app_instance_id" {
   description = "ID of the application EC2 instance"
-  value       = module.compute.app_instance_id
+  value       = aws_instance.app.id
 }
 
 output "app_instance_private_ip" {
   description = "Private IP of the application EC2 instance"
-  value       = module.compute.app_instance_private_ip
+  value       = aws_instance.app.private_ip
 }
 
 output "bastion_instance_id" {
   description = "ID of the bastion EC2 instance"
-  value       = module.compute.bastion_instance_id
+  value       = aws_instance.bastion.id
 }
 
 output "bastion_public_ip" {
   description = "Public IP of the bastion EC2 instance"
-  value       = module.compute.bastion_public_ip
+  value       = aws_instance.bastion.public_ip
 }
+
